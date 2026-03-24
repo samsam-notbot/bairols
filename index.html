@@ -82,24 +82,6 @@
     }
     .btn-outline:hover { background: rgba(245,198,206,0.15); }
 
-    .quicklinks {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: #e0d8d9;
-    }
-    .quicklink {
-      background: white; padding: 18px 12px;
-      text-align: center; cursor: pointer;
-      transition: background 0.15s;
-    }
-    .quicklink:hover { background: #fdf0f2; }
-    .ql-icon {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: #fdeaed; margin: 0 auto 10px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .quicklink strong { font-size: 13px; font-weight: 600; color: #1a1a1a; display: block; }
-    .quicklink p { font-size: 12px; color: #777; margin-top: 3px; }
-
     .content {
       display: grid; grid-template-columns: 2fr 1fr;
       max-width: 1100px; margin: 0 auto;
@@ -174,7 +156,6 @@
     @media (max-width: 768px) {
       .header { flex-wrap: wrap; }
       nav { margin-left: 0; }
-      .quicklinks { grid-template-columns: repeat(2, 1fr); }
       .content { grid-template-columns: 1fr; }
       .main { border-right: none; border-bottom: 1px solid #e8e0e1; padding: 24px 16px; }
       .sidebar { padding: 24px 16px; }
@@ -212,6 +193,14 @@
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+  
+    .quicklinks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #e0d8d9; }
+    .quicklink { background: white; padding: 18px 12px; text-align: center; cursor: pointer; transition: background 0.15s; text-decoration: none; display: block; }
+    .quicklink:hover { background: #fdf0f2; }
+    .ql-icon { width: 40px; height: 40px; border-radius: 50%; background: #fdeaed; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; }
+    .quicklink strong { font-size: 13px; font-weight: 600; color: #1a1a1a; display: block; }
+    .quicklink p { font-size: 12px; color: #777; margin-top: 3px; }
+    @media (max-width: 600px) { .quicklinks { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
@@ -231,7 +220,7 @@
     <nav>
       <a href='index.html' class='active'>Accueil</a>
       <a href='actualites.html'>Actualités</a>
-      <div class='dropdown'><a href='#'>Découvrir</a><div class='dropdown-menu'><a href='histoire.html'>Histoire &amp; Patrimoine</a><a href='nature.html'>Nature &amp; Randonnées</a><a href='culture.html'>Culture &amp; Cinéma</a><a href='hebergement.html'>Hébergement</a><a href='restauration.html'>Restauration</a></div></div>
+      <div class='dropdown'><a href='#'>Découvrir</a><div class='dropdown-menu'><a href='histoire.html'>Histoire &amp; Patrimoine</a><a href='nature.html'>Nature &amp; Randonnées</a><a href='hebergement.html'>Hébergement</a><a href='restauration.html'>Restauration</a><a href='culture.html'>Culture &amp; Cinéma</a></div></div>
       <div class='dropdown'><a href='#'>Municipalité</a><div class='dropdown-menu'><a href='municipalite.html'>Le Conseil Municipal</a><a href='infos-pratiques.html'>Infos pratiques</a></div></div>
       <div class='dropdown'><a href='#'>Vie pratique</a><div class='dropdown-menu'><a href='vie-scolaire.html'>Vie scolaire</a><a href='vie-associative.html'>Vie associative</a><a href='infrastructures.html'>Infrastructures</a><a href='commerces.html'>Commerces &amp; Services</a><a href='transports.html'>Transports</a></div></div>
     </nav>
@@ -249,38 +238,54 @@
       </div>
     </div>
   </section>
-
-  <div class="quicklinks">
-    <div class="quicklink">
-      <div class="ql-icon">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="9" width="16" height="10" rx="1.5" stroke="#8c1022" stroke-width="1.5"/><path d="M7 9V7a3 3 0 016 0v2" stroke="#8c1022" stroke-width="1.5"/></svg>
-      </div>
       <strong>Mairie</strong>
       <p>Horaires & contact</p>
     </div>
-    <div class="quicklink">
-      <div class="ql-icon">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L2 8v10h6V12h4v6h6V8L10 2z" stroke="#8c1022" stroke-width="1.5" stroke-linejoin="round"/></svg>
-      </div>
+    
       <strong>Démarches</strong>
       <p>État civil & admin</p>
     </div>
-    <div class="quicklink">
-      <div class="ql-icon">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="14" rx="1.5" stroke="#8c1022" stroke-width="1.5"/><line x1="6" y1="10" x2="14" y2="10" stroke="#8c1022" stroke-width="1.5"/><line x1="6" y1="14" x2="11" y2="14" stroke="#8c1022" stroke-width="1.5"/><path d="M6 4V3a1 1 0 011-1h6a1 1 0 011 1v1" stroke="#8c1022" stroke-width="1.5"/></svg>
-      </div>
+    
       <strong>Conseils</strong>
       <p>Comptes rendus</p>
     </div>
-    <div class="quicklink">
-      <div class="ql-icon">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#8c1022" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#8c1022" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
+    
       <strong>Agenda</strong>
       <p>Événements à venir</p>
     </div>
   </div>
 
+
+  <div class="quicklinks">
+    <a href="infos-pratiques.html" class="quicklink">
+      <div class="ql-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="9" width="16" height="10" rx="1.5" stroke="#8c1022" stroke-width="1.5"/><path d="M7 9V7a3 3 0 016 0v2" stroke="#8c1022" stroke-width="1.5"/></svg>
+      </div>
+      <strong>Mairie</strong>
+      <p>Horaires &amp; contact</p>
+    </a>
+    <a href="infos-pratiques.html" class="quicklink">
+      <div class="ql-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L2 8v10h6V12h4v6h6V8L10 2z" stroke="#8c1022" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+      <strong>Démarches</strong>
+      <p>État civil &amp; admin</p>
+    </a>
+    <a href="municipalite.html" class="quicklink">
+      <div class="ql-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="14" rx="1.5" stroke="#8c1022" stroke-width="1.5"/><line x1="6" y1="10" x2="14" y2="10" stroke="#8c1022" stroke-width="1.5"/><line x1="6" y1="14" x2="11" y2="14" stroke="#8c1022" stroke-width="1.5"/><path d="M6 4V3a1 1 0 011-1h6a1 1 0 011 1v1" stroke="#8c1022" stroke-width="1.5"/></svg>
+      </div>
+      <strong>Conseil municipal</strong>
+      <p>Élus &amp; comptes rendus</p>
+    </a>
+    <a href="actualites.html" class="quicklink">
+      <div class="ql-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#8c1022" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#8c1022" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <strong>Agenda 2026</strong>
+      <p>Événements à venir</p>
+    </a>
+  </div>
   <div class="content">
     <main class="main">
       <div class="section-title">Dernières actualités</div>
@@ -340,8 +345,7 @@
       </div>
       <div class="info-card">
         <strong>&#127748; M&#233;t&#233;o &#224; Bairols</strong>
-        <div id="meteo-content" style="font-size:13px;color:#666;text-align:center;padding:6px 0;">Chargement...</div>
-      </div>
+</div>
 
       </aside>
   </div>
